@@ -77,14 +77,14 @@ function calculateTotalAmount() {
 
     // Calculate tip and total amount per person
     const totalTip = calculateTipAmount();
-    const tipPerPerson = totalTip / calculatorData.people;
+    tipPerPerson = totalTip / calculatorData.people;
     totalPerPerson = (calculatorData.bill + totalTip) / calculatorData.people;
     
     // Update the display
     $("#tip-amount").text(`$${tipPerPerson.toFixed(2)}`);
     $("#total-amount").text(`$${totalPerPerson.toFixed(2)}`);
 
-    return totalPerPerson, tipPerPerson; 
+    return { totalPerPerson, tipPerPerson }; 
 }
 
 // Function to reset the calculator
