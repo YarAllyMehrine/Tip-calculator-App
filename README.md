@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: 
+- Solution URL: https://github.com/YarAllyMehrine/Tip-calculator-App.git
 - Live Site URL: 
 
 ## My process
@@ -43,5 +43,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [[@YarAllyMehrine](https://www.frontendmentor.io/profile/YarAllyMehrine)
 
