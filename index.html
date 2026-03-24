@@ -18,7 +18,7 @@
     
 </head>
 <body>
-  <div class="container">
+  <main class="container">
     <img src="./images/logo.svg" alt="logo" class="logo"/>
     
     <div class="card-container">
@@ -29,21 +29,21 @@
         </div>
 
         <div class="tip-container">
-          <label for="tip">Select Tip %</label>
+          <label for="custom-tip">Select Tip %</label>
           <div class="tip-btn-container">
             <button class="tip tip-btn" id="tip-5" type="button">5%</button>
             <button class="tip tip-btn" id="tip-10" type="button">10%</button>
             <button class="tip tip-btn" id="tip-15" type="button">15%</button>
             <button class="tip tip-btn" id="tip-25" type="button">25%</button>
             <button class="tip tip-btn" id="tip-50" type="button">50%</button>
-            <input type="number"  id="custom-tip" placeholder="Custom" min="0">
+            <input type="number"  id="custom-tip" placeholder="Custom" min="0" aria-label="Custom tip percentage">
           </div>
           
         </div>
 
         <div class="ppl-container">
           <label for="people">Number of People</label>
-          <span class="error-text hidden" >Can't be zero</span>
+          <span class="error-text hidden" aria-live="polite" >Can't be zero</span>
           <input class="calc-input" type="number" id="people" placeholder="0" min="1">
         </div>
       </div>
@@ -72,7 +72,7 @@
 
         <button class="reset-btn" type="button" id="reset-btn">RESET</button>
       </div>
-  </div>
+    </main>
 
   <script src="./src/script.js"></script>
 </body>
