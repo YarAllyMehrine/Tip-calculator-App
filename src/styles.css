@@ -1,0 +1,245 @@
+/*Declaring root variables */
+:root {
+    --green-400 : hsl(172, 67%, 45%);
+    --green-900 : hsl(183, 100%, 15%);
+    --grey-500 : hsl(186, 14%, 43%);
+    --grey-400 : hsl(184, 14%, 56%);
+    --grey-200 : hsl(185, 41%, 84%);
+    --grey-50 : hsl(189, 41%, 97%);
+    --white : hsl(0, 0%, 100%);
+    --tomato : hsl(4, 100%, 67%);
+}
+
+*,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Mono";
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--grey-500);
+    background-color: var(--grey-200);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.card-container {
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    box-shadow: 0px 5px 30px 0px var(--grey-400);
+    padding: 20px;
+    width: 800px;
+    margin-top: 40px;
+}
+
+/*Styling left side data (input, buttons and labels) */
+.left-data-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    background-color: var(--grey-50);
+    border: none;
+    text-align: right;
+    color: var(--green-900);
+    font-family: "Space Mono";
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.bill-container {
+    margin: 0 0 30px 0;
+}
+
+.ppl-container {
+    margin: 30px 0 10px 0;
+}
+
+.tip-btn-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tip-btn {
+    background-color: var(--green-900);
+    color: var(--white);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Space Mono";
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    max-height: 45px;
+}
+
+.tip-btn:hover {
+    background-color: var(--grey-200);
+    color: var(--green-900);
+}
+
+#custom-tip {
+    background-color: var(--grey-50);
+    color: var(--green-900);
+    text-align: center;
+    font-family: "Space Mono";
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    padding: 8px;
+    margin-top: -1px;
+}
+
+#custom-tip ::placeholder {
+    color: var(--grey-500);
+}
+
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin-left: 20px;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/*Styling the calculator result */
+.result-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--green-900);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.per-person {
+    color: var(--grey-400);
+    font-size: 12px;
+    display: block;
+}
+
+.amount {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--green-400);
+}
+
+.reset-btn {
+    margin: auto 0 20px 0;
+    background-color: var(--green-400);
+    color: var(--green-900);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Space Mono";
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: var(--grey-200);
+}
+
+/*Adding icon to input field and customizing */
+#bill {
+    background-image: url('../images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-position: 12px 10px;
+    background-size: 10px;
+}
+
+#people {
+    background-image: url('../images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-position: 12px 12px;
+    background-size: 10px;
+}
+
+/*Completed and error class styling */
+.tip.selected {
+    background-color: var(--green-400);
+    color: var(--green-900);
+}
+
+.error-text {
+    color: var(--tomato);
+    font-size: 12px;
+    margin: 0 0px 0 110px;
+}
+
+.error {
+    border: 2px solid var(--tomato);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media queries for mobile layout*/
+@media screen and (min-width: 300px) and (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        margin-top: 250px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .tip-btn-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .reset-btn {
+        margin: 20px 0 10px 0;
+    }
+}
