@@ -22,7 +22,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/YarAllyMehrine/Tip-calculator-App.git
-- Live Site URL: 
+- Live Site URL: https://yarallymehrine.github.io/Tip-calculator-App/
 
 ## My process
 
