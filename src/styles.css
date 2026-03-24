@@ -55,7 +55,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    padding: 30px;
 }
 
 input {
@@ -113,12 +113,12 @@ input {
     border-radius: 5px;
     border: none;
     font-size: 20px;
-    padding: 8px;
+    padding: 5px;
     margin-top: -1px;
 }
 
 #custom-tip ::placeholder {
-    color: var(--grey-500);
+    color: var(--grey-200);
 }
 
 /* Chrome, Safari, Edge */
